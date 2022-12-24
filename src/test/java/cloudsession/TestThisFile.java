@@ -12,8 +12,12 @@ public class TestThisFile {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		System.out.println("Started the test On Jenkins --- BY ANKUR");
+		
 		driver.get("https://selectorshub.com/xpath-practice-page/");
-		System.out.println("This is the page " + driver.getCurrentUrl());
+		String title = driver.getTitle();
+		System.out.println("This is the page " + driver.getCurrentUrl() + "\n");
+		System.out.println("Title is " + title);
+	
 		driver.quit();
 	}
 
